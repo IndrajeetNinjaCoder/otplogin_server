@@ -5,7 +5,7 @@ const cors = require("cors");
 const router = require("./Routes/router")
 require('./db/conn');
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 
 // Middleware 
@@ -15,6 +15,6 @@ app.use(router);
 
 
 
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
     console.log(`Server started at Port No. ${PORT}`);
 })
